@@ -5,3 +5,6 @@ The repo is the source code for [Continual Few-shot Relation Learning via Embedd
 Chengwei Qin, Shafiq Joty
 
 Accepted at 60th Annual Meeting of the Association for Computational Linguistics (ACL'22).
+
+
+## Updating...
