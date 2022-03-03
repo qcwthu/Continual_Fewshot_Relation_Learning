@@ -314,7 +314,6 @@ class data_sampler(object):
         return " ".join(word_list)
 
 
-
 class data_sampler_bert(object):
 
     def __init__(self, config=None, tokenizer=None, max_length=128):

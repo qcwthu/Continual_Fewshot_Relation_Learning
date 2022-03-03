@@ -1,5 +1,5 @@
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 import numpy as np
 import torch
 import torch.nn as nn
@@ -365,11 +365,13 @@ if __name__ == '__main__':
 
     #'''
     tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
+    donum = 1
+
     distantpath = "data/distantdata/"
     file1 = distantpath + "distant.json"
     file2 = distantpath + "exclude_fewrel_distant.json"
     list_data,entpair2scope = process_data(file1,file2)
-    donum = 1
+
     topk = 16
     max_sen_length_for_select = 64
     max_sen_lstm_tokenize = 128
@@ -377,6 +379,7 @@ if __name__ == '__main__':
 
     print("********* load from ckpt ***********")
     ckptpath = "simmodelckpt"
+    #ckptpath = "/data/qin/FewShotContinualRE/mycode/newcode/ckpt_of_step_40000"
     print(ckptpath)
     ckpt = torch.load(ckptpath)
     SimModel = BertModel.from_pretrained('bert-base-uncased',state_dict=ckpt["bert-base"]).to(config["device"])
