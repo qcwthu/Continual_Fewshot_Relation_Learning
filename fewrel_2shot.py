@@ -375,35 +375,34 @@ if __name__ == '__main__':
     word2id = json.load(open(os.path.join(root_path, 'glove/word2id.txt')))
     word2vec = np.load(os.path.join(root_path, 'glove/word2vec.npy'))
     donum = 1
-    #'''
+
     tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
+
     distantpath = "data/distantdata/"
     file1 = distantpath + "distant.json"
     file2 = distantpath + "exclude_fewrel_distant.json"
     list_data,entpair2scope = process_data(file1,file2)
 
     topk = 16
-    #topk = 16
     max_sen_length_for_select = 64
-    #max_sen_length_for_select = 48
     max_sen_lstm_tokenize = 128
-    #select_thredsold = 1.5
     select_thredsold = select_thredsold_param
 
     print("********* load from ckpt ***********")
     ckptpath = "simmodelckpt"
     print(ckptpath)
     ckpt = torch.load(ckptpath)
+    print("before loading")
     SimModel = BertModel.from_pretrained('bert-base-uncased',state_dict=ckpt["bert-base"]).to(config["device"])
+    print("load finished")
 
-    #'''
     allunlabledata = np.load("allunlabeldata.npy").astype('float32')
     d = 768 * 2
     index = faiss.IndexFlatIP(d)
     print(index.is_trained)
     index.add(allunlabledata)  # add vectors to the index
     print(index.ntotal)
-    #'''
+
 
     for m in range(donum):
         print(m)
