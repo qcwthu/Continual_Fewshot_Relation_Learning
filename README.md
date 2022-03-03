@@ -1,6 +1,6 @@
 # [ACL2022] Continual Few-shot Relation Learning via Embedding Space Regularization and Data Augmentation 
 
-The repo is the source code for [Continual Few-shot Relation Learning via Embedding Space Regularization and Data Augmentation] (https://openreview.net/forum?id=tN-UlSrCBgM)
+The repo is the source code for [Continual Few-shot Relation Learning via Embedding Space Regularization and Data Augmentation](https://openreview.net/forum?id=tN-UlSrCBgM)
 
 Chengwei Qin, Shafiq Joty
 
