@@ -140,6 +140,8 @@ def cotinualfewshotpreprocess(config,tokenizer):
             fw.write(line + "\n")
         fw.close()
 
+
+
         testtxtname = "data/fewrel/CFRLdatatest_10_100_10_"+str(filenum)+"/test_" + str(i) + ".txt"
         fw = open(testtxtname, "w")
         for line in tousetestdata:
