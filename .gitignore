@@ -3,3 +3,4 @@ data/distantdata
 simmodelckpt
 allunlabeldata.npy
 __pycache__
+*log*

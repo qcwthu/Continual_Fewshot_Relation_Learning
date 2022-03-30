@@ -694,11 +694,11 @@ def select_similar_data_new(training_data,tokenizer,entpair2scope,topk,max_sen_l
                     selectdata.append(np.asarray(oneseldata))
                     #selectres.append(list_data[entpair2scope[onedicid][0] + onenum])
                 alladdnum += tmpselectnum
-        else:
+        #else:
             #print("nothing!continue")
             #continue
             #print("hghagdhasdgjahsgdjahgdjahgdjasgdj")
-        #if onedicid not in entpair2scope or tmpselectnum == 0:
+        if onedicid not in entpair2scope or tmpselectnum == 0:
             #print("aaaaaaaaaa")
             nothas += 1
             # print("not in! use fasis")
