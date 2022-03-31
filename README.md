@@ -15,9 +15,38 @@ git clone git@github.com:qcwthu/Continual_Fewshot_Relation_Learning.git
 cd Continual_Fewshot_Relation_Learning
 ```
 
-### 2. Install dependencies
+### 2. Install modified transformers
 
-#### 2.1. Create conda environment
+```
+cd transformers; pip install .; cd ..
+```
+
+### 3. Download pre-trained files
+
+#### 3.1. Pre-trained similarity model
+
+[simmodelckpt](https://drive.google.com/file/d/1zS9gcJOtexA4wenRrKuHcMauEyFZMGG5/view?usp=sharing)
+
+Please name it as 'simmodelckpt' and put it under the root folder of this project.
+
+#### 3.2. Embeddings of all unlabeled data
+
+[allunlabeldata.npy](https://drive.google.com/file/d/1iVi338KPcUPOLPYDY8SwDifhMGaud1kd/view?usp=sharing)
+
+Please name it as 'allunlabeldata.npy' and put it under the root folder of this project.
+
+#### 3.3. Glove embeddings
+
+[glove](https://drive.google.com/drive/folders/1G_D1npBY_nirZGBgWcv7jlZZnYfbxBbn?usp=sharing)
+
+Please put 'glove' folder under the root folder of this project.
+
+### 4. Run script
+
+```
+bash runall.sh
+```
+
 
 
 
