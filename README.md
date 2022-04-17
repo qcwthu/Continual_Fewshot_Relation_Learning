@@ -41,6 +41,10 @@ Please name it as 'allunlabeldata.npy' and put it under the root folder of this 
 
 Please put 'glove' folder under the root folder of this project.
 
+#### 3.4 distant.json
+
+[distant.json](https://drive.google.com/file/d/1fj7Z_eRZ37KuHid8a0kwSr2_tXgj3yHy/view?usp=sharing)
+
 ### 4. Run script
 
 ```
